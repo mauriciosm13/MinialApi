@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HTC\\source\\repos\\ApiTarefas\\ApiTarefas\\ApiTarefas.csproj": {}
+    "C:\\Users\\HTC\\Documents\\GitHub\\MinialApi\\ApiTarefas\\ApiTarefas\\ApiTarefas.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HTC\\source\\repos\\ApiTarefas\\ApiTarefas\\ApiTarefas.csproj": {
+    "C:\\Users\\HTC\\Documents\\GitHub\\MinialApi\\ApiTarefas\\ApiTarefas\\ApiTarefas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HTC\\source\\repos\\ApiTarefas\\ApiTarefas\\ApiTarefas.csproj",
+        "projectUniqueName": "C:\\Users\\HTC\\Documents\\GitHub\\MinialApi\\ApiTarefas\\ApiTarefas\\ApiTarefas.csproj",
         "projectName": "ApiTarefas",
-        "projectPath": "C:\\Users\\HTC\\source\\repos\\ApiTarefas\\ApiTarefas\\ApiTarefas.csproj",
+        "projectPath": "C:\\Users\\HTC\\Documents\\GitHub\\MinialApi\\ApiTarefas\\ApiTarefas\\ApiTarefas.csproj",
         "packagesPath": "C:\\Users\\HTC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HTC\\source\\repos\\ApiTarefas\\ApiTarefas\\obj\\",
+        "outputPath": "C:\\Users\\HTC\\Documents\\GitHub\\MinialApi\\ApiTarefas\\ApiTarefas\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -45,6 +45,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
