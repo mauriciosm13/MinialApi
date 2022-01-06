@@ -38,6 +38,29 @@ app.MapPost("/tarefas", async (Tarefa tarefa, AppDbContext db) =>
     return Results.Created($"/tarefas/{tarefa.Id}",tarefa);
 });
 
+app.MapPut("/tarefas/{id}", async (int id, Tarefa inputTarefa, AppDbContext db) =>
+{
+    var tarefa = await db.Tarefas.FindAsync(id);
+    if (tarefa is null) return Results.NotFound();
+    tarefa.Name = inputTarefa.Name;
+    tarefa.IsFinished = inputTarefa.IsFinished;
+
+    await db.SaveChangesAsync();
+    return Results.Ok();
+});
+
+
+app.MapDelete("/tarefas/{id}", async (int id, AppDbContext db) =>
+{
+    if(await db.Tarefas.FindAsync(id) is Tarefa tarefa)
+    {
+        db.Tarefas.Remove(tarefa);
+        await db.SaveChangesAsync();
+        return Results.Ok();
+    }
+    return Results.NotFound();
+});
+
 app.Run();
 
 class Tarefa
